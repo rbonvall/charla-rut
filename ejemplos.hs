@@ -20,7 +20,7 @@ naturales = [1..]
 
 divisible n d = mod n d == 0
 
-esPrimo n = all (divisible n) [2 .. n - 1]
+esPrimo n = not (any (divisible n) [2 .. (n - 1)])
 
 primos = filter esPrimo (tail naturales)
 
